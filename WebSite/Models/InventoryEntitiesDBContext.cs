@@ -3,7 +3,7 @@
 namespace WebSite.Models
 {
 
-    public class InventoryEntities : DbContext
+    public class InventoryEntitiesDBContext : DbContext
     {
         public DbSet<InventoryItem> InventoryItems { get; set; }
       
