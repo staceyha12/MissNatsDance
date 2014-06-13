@@ -1,0 +1,273 @@
+﻿@{
+    ViewBag.Title = "Timetable";
+}
+
+
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading"><h4>Timetable</h4></div>
+    <div class="panel-body">
+        <p>
+            Below is the current weekly timetable for our classes. Classes marked as <span style="color:red">Full</span> are no longer available for the current term. Private tuition is also available on request. To help you to determine which classes are age-appropriate for your child,
+            see the @Html.ActionLink("Our Classes", "Classes", "Home") page or click on the links to the classes below. To view pricing information and learn more about Family Discounts, see our @Html.ActionLink("Pricing", "Pricing", "Home") page.
+        </p>
+        <p> All dancers will need to enrol at the beginning of each new year, however each Dancer will be automatically re- enrolled each term unless otherwise notified.</p>
+        <p>
+            <b>NOTE:</b> In order to provide the best experience for your child, we ask that you take care to respect our studio rules. Please read our @Html.ActionLink("Studio Policies", "Policies", "Home") page before you decide to enrol
+            your child in Miss Nat's Dance School. A ONE WARNING system is now in place - with dancers asked to leave after the second warning.
+
+
+
+        </p>
+      
+    </div>
+    <div style="padding:15px">
+       
+        <h3><a id="Term2">Timetable Term 2 2014</a></h3>
+
+        <!--Tues-->
+        <div class="row">
+            <div class="col-md-4">
+                    <table class="table table-responsive table-striped table-bordered">
+                        <caption>Tuesdays</caption>
+                        <tbody>
+                            <tr>
+                                <td >9:30 - 10:15<br />
+                                @Html.ActionLink("Toddler Dance", "Classes", "Home", null, null, "tots", null, null)</td>
+
+                                <td style="color:red">Full</td>
+
+                            </tr>
+
+                            <tr>
+                                <td >10:30 - 11:15<br />@Html.ActionLink("Tiny Tots A", "Classes", "Home", null, null, "tots", null, null) </td>
+                                <td style="color:red">
+                                    Full
+                                </td></tr>
+
+                            <tr>
+                                <td >11:30 - 12:15<br />@Html.ActionLink("Tiny Tots A", "Classes", "Home", null, null, "tots", null, null) </td>
+
+                                <td style="color:red">Full</td>
+                            </tr>
+                            <tr>
+                                <td >3:45 - 4:30<br />@Html.ActionLink("Ballet 1", "Classes", "Home", null, null, "ballet", null, null)</td>
+
+                                <td>Open</td>
+
+
+                            </tr>
+
+                            <tr>
+                                <td >4:30 - 5:30<br />@Html.ActionLink("Ballet 2", "Classes", "Home", null, null, "ballet", null, null)</td>
+                                <td style="color:red">
+                                    Full
+                                </td></tr>
+                            <tr>
+                                <td >5:30 - 6:30<br />@Html.ActionLink("Ballet 3", "Classes", "Home", null, null, "ballet", null, null) </td>
+                                <td style="color:red">
+                                    Full
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td >6:30 - 7:00<br />@Html.ActionLink("Pointe Work", "Classes", "Home", null, null, "ballet", null, null) </td>
+                                <td style="color:red">
+                                    Full
+                                </td>
+
+                                
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+   
+            <!--Weds-->
+            <div class="col-md-4">
+                   <table class="table table-responsive table-striped table-bordered">
+                        <caption>Wednesdays</caption>
+                        <tbody>
+                            <tr>
+                                <td>9:30 - 10:15<br />@Html.ActionLink("Toddler Dance", "Classes", "Home", null, null, "tots", null, null) </td>
+                                <td style="color:red">
+                                    Full
+                                </td></tr>
+
+                            <tr>
+                                <td>10:30 - 11:15<br />@Html.ActionLink("Tiny Tots A", "Classes", "Home", null, null, "tots", null, null) </td>
+                                <td style="color:red">
+                                    Full
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td>3:45 - 4:30<br />@Html.ActionLink("Tiny Tots B/C", "Classes", "Home", null, null, "tots", null, null) </td>
+                                <td style="color:red">Full</td>
+                            </tr>
+
+                            <tr>
+                                <td>4:30 - 5:30<br />@Html.ActionLink("Jazz/Hip Hop 1", "Classes", "Home", null, null, "jazz", null, null)</td>
+                                <td style="color:red">Full</td>
+                            </tr>
+                            <tr>
+                                <td>5:30 - 6:30<br />@Html.ActionLink("Jazz/Hip Hop 2", "Classes", "Home", null, null, "jazz", null, null)</td>
+                                <td style="color:red">Full</td>
+                            </tr>
+
+                            <tr>
+                                <td>7:30 - 8:30<br />@Html.ActionLink("Zumba", "Classes", "Home", null, null, "zumba", null, null)</td>
+                                <td style="color:red">
+                                    Full
+                                </td>
+
+
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+   
+            <!--Thurs-->
+            <div class="col-md-4">
+                    <table class="table table-responsive table-striped table-bordered">
+                        <caption>Thursdays</caption>
+                        <tbody>
+                         
+                            <tr>
+                                <td>3:45 - 4:00<br />@Html.ActionLink("Tiny Tots B", "Classes", "Home", null, null, "tots", null, null) </td>
+                                <td style="color:red">Full</td>
+
+                            </tr>
+                            <tr>
+                                <td>4:30 - 5:30<br />@Html.ActionLink("Boyz Crew", "Classes", "Home", null, null, "boyz", null, null)</td>
+                                <td style="color:red">
+                                    Full
+                                </td>
+
+
+                            </tr>
+                            <tr>
+                                <td>5:30 - 7:00<br />@Html.ActionLink("Jazz/Hip Hop 3", "Classes", "Home", null, null, "jazz", null, null)</td>
+                                <td style="color:red">
+                                    Full
+                                </td></tr>
+
+                            <tr>
+                                <td>7:15 - 8:30<br />@Html.ActionLink("Adults Dance Class", "Classes", "Home", null, null, "adult", null, null) </td>
+                                <td>Open</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+         <div class="row">
+            <!--Fri-->
+            <div class="col-md-4">
+         
+                    <table class="table table-responsive table-striped table-bordered">
+                        <caption>Fridays</caption>
+                        <tbody>
+                            <tr>
+                                <td>9:30 a- 10:15<br />@Html.ActionLink("Toddler Dance", "Classes", "Home", null, null, "tots", null, null) </td>
+                                <td style="color:red">
+                                    Full
+                                </td></tr>
+
+                            <tr>
+                                <td>10:30 - 11:15<br />@Html.ActionLink("Tiny Tots A", "Classes", "Home", null, null, "tots", null, null) </td>
+                                <td style="color:red">Full</td>
+
+                            </tr>
+                            <tr>
+                                <td>11:30 - 12:15<br />@Html.ActionLink("Tiny Tots A", "Classes", "Home", null, null, "tots", null, null) </td>
+                                <td>Open</td>
+                            </tr>
+
+                            <tr>
+                                <td>4:00 - 4:45<br />@Html.ActionLink("Tap 1", "Classes", "Home", null, null, "tap", null, null) </td>
+                                <td>Open</td>
+                            </tr>
+
+                            <tr>
+                                <td>5:00 - 6:00<br />@Html.ActionLink("Jazz/Hip Hop 1", "Classes", "Home", null, null, "jazz", null, null)</td>
+                                <td style="color:red">
+                                    Full
+                                </td>
+
+                            </tr><tr>
+                                <td>6:00 - 7:15<br />@Html.ActionLink("Jazz/Hip Hop 4", "Classes", "Home", null, null, "jazz", null, null)</td>
+                                     <td>Open</td>
+
+</tr>
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+      
+            <!--Sat-->
+
+            <div class="col-md-4">
+                   <table class="table table-responsive table-striped table-bordered">
+                        <caption>Saturdays</caption>
+                        <tbody>
+                            <tr>
+                                <td>9:30 - 10:15<br />@Html.ActionLink("Tiny Tots B", "Classes", "Home", null, null, "tots", null, null) </td>
+                                <td style="color:red">Full</td>
+                            </tr>
+                            <tr>
+                                <td>10:15 - 11:00<br />@Html.ActionLink("Tiny Tots C", "Classes", "Home", null, null, "tots", null, null) </td>
+                                <td style="color:red">
+                                    Full
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>11:00 - 11:45<br />@Html.ActionLink("Tap 2", "Classes", "Home", null, null, "tap", null, null) </td>
+                                <td>Open</td>
+                                
+                            </tr>
+
+                            <tr>
+                                <td>11:45 - 12:30<br />@Html.ActionLink("Tap 3", "Classes", "Home", null, null, "tap", null, null)  </td>
+                                <td>Open</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>12:30  - 1:15<br />@Html.ActionLink("Tap 4", "Classes", "Home", null, null, "tap", null, null) </td>
+                                <td>Open</td>
+                                
+
+                            </tr>
+                            <tr>
+                                <td>1:30 - 2:30<br />@Html.ActionLink("Jazz/Hip Hop 1", "Classes", "Home", null, null, "jazz", null, null)</td>
+                                
+                                <td style="color:red">
+                                    Full
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td>2:45 - 4:00<br />@Html.ActionLink("Jazz/Hip Hop 2", "Classes", "Home", null, null, "jazz", null, null)</td>
+
+                                <td style="color:red">
+                                    Full
+                                </td>
+
+
+                            </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+</div>

@@ -1,0 +1,126 @@
+﻿@{
+    ViewBag.Title = "Pricing";
+}
+
+
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading"><h4>Pricing &amp; Family Discounts</h4></div>
+    <div class="panel-body">
+        <p>Fees are set per term unless indicated otherwise. Generally, classes that are one hour our $135/term. Classes that are 45 min are $125/term. All term fees are due to be paid <span style="text-decoration:underline">before the 2nd week of each new term</span>. We are sorry, but we do not offer weekly payments.  </p>
+
+        <p><b><u>FREE TRIAL</u></b> classes are available for new students. Please <a href="mailto:missnatsdanceschool@hotmail.com"> email Miss Nat </a> which class your child/children wish to try out. </p>
+        <p>We have a Miss Nat's Dance School <a href="http://www.kidzabuzz.com.au/"> <b>Kidzabuzz</b> </a> voucher that offers a 10% discount!</p>
+      
+        <p>
+            <b>NOTE:</b> In order to provide the best experience for your child, we ask that you take care to respect our studio rules. Please read our @Html.ActionLink("Studio Policies", "Policies", "Home") page before you decide to enrol
+            your child in Miss Nat's Dance School. A ONE WARNING system is now in place - with dancers asked to leave after the second warning.
+
+
+
+        </p>
+
+    </div>
+    <div style="padding:15px">
+        <div class="row">
+            <div class="col-md-4">
+                <table class="table table-responsive table-striped table-bordered">
+                    <caption>Pricing Guide</caption>
+                    <tbody>
+                        <tr>
+                            <td>@Html.ActionLink("Toddler Dance", "Classes", "Home", null, null, "tots", null, null)</td>
+                            <td>$100</td>
+
+                        </tr>
+
+                        <tr>
+                            <td>@Html.ActionLink("Tiny Tots A/B/C", "Classes", "Home", null, null, "tots", null, null) </td>
+                            <td>$125</td>
+
+                        </tr>
+                        <tr>
+                            <td>@Html.ActionLink("Jazz/Hip Hop (All Levels)", "Classes", "Home", null, null, "jazz", null, null)</td>
+                            <td>$135</td>
+
+                        </tr>
+                        <tr>
+                            <td>@Html.ActionLink("Tap (All Levels)", "Classes", "Home", null, null, "tap", null, null)</td>
+                            <td>$125</td>
+
+                        </tr>
+
+                        <tr>
+                            <td>@Html.ActionLink("Boyz Crew", "Classes", "Home", null, null, "boyz", null, null)</td>
+                            <td>$135</td>
+                        </tr>
+                        <tr>
+                            <td>@Html.ActionLink("Ballet 1/2", "Classes", "Home", null, null, "ballet", null, null) </td>
+                            <td>$135</td>
+                        </tr>
+                        <tr>
+                            <td>@Html.ActionLink("Ballet 3", "Classes", "Home", null, null, "ballet", null, null) </td>
+                            <td>$135</td>
+                        </tr>
+
+                        <tr>
+                            <td>@Html.ActionLink("Pointe Work", "Classes", "Home", null, null, "ballet", null, null) </td>
+                            <td>$50</td>
+                        </tr>
+                        <tr>
+                            <td>@Html.ActionLink("Zumba", "Classes", "Home", null, null, "zumba", null, null) </td>
+                            <td>$10/class, $80/10 class pass</td>
+                        </tr>
+                        <tr>
+                            <td>Private Tuition </td>
+                            <td>$65/hr.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-md-8">
+
+                <table class="table-responsive table table-striped table-bordered">
+                    <caption>Family and Multiple Class Discounts</caption>
+                    <tbody>
+
+                        <tr>
+                            <td>Family Discount</td>
+                            <td> $25 discount per term per sibling</td>
+                        </tr>
+                        <tr>
+                            <td> 2 classes per week</td>
+                            <td>$35 discount of total fees</td>
+                        </tr>
+                        <tr>
+                            <td> 3 classes per week</td>
+                            <td>$330 per term ( discounted $75:00)</td>
+                        </tr>
+
+                        <tr>
+                            <td> 4 classes per week</td>
+                            <td> $450 per term ( discounted $90:00)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <ul style="list-style:none;padding:0">
+                    <li>
+                        <h2>Paying by cash</h2>
+                        <p>If you are paying by cash, please make sure you place the money in a sealed envelope with your child's name clearly written on the front.</p>
+                    </li>
+                    <li>
+                        <h2>Paying by internet banking</h2>
+                        <p>
+                           Please email <a href="mailto:maccae25@hotmail.com">Joan</a> for banking details.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <img src="\images\kidsabuzz.jpg" class="img-responsive img-rounded" />
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

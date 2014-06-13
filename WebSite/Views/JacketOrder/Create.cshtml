@@ -1,0 +1,145 @@
+﻿@model WebSite.Models.JacketOrderViewModel
+@{
+    ViewBag.Title = "Winter Jackets Order Form";
+}
+
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading"><h4>Winter Jacket Order Form</h4></div>
+    <div class="panel-body">
+        <p>
+            @using (Html.BeginForm("Submit", "JacketOrder", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+              
+                <hr />
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Name)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Email)
+                    </div>
+                </div>
+                  <div class="form-group">
+                          <div class="col-md-2">
+                          </div>
+                          <div class="col-md-2">
+                              @Html.DropDownListFor(m => m.CurrentOrder.ColorID, (SelectList)ViewBag.Colors, new { @class = "form-control", @id="idxColors" })
+                          </div>
+                          <div class="col-md-2">
+                              @Html.DropDownListFor(m => m.CurrentOrder.SizeID, (SelectList)ViewBag.Sizes, new { @class = "form-control", @id="idxSizes" })
+                          </div>
+                          
+                         
+                          <div class="col-md-2">
+                              @Html.TextBoxFor(m => m.CurrentOrder.Quantity, new {@onkeypress="return isNumberKey(event)", @type="number", @min="1", @max="100", @class = "form-control", @value="1", @id="idxQuantity" })
+                          </div>
+
+                      <div class="col-md-2">
+                          <input type="button" class="btn btn-default" id ="idxAdd" value="Add" />
+                      </div>
+                </div>
+                
+
+            }
+            @if (Model != null)
+            {
+                 Html.RenderPartial("_CurrentOrderList", Model.JacketOrders); 
+            }
+            <ul>
+            </ul>
+    </div>
+</div>
+
+<script>
+
+    function isNumberKey(evt) {
+        var charCode = (evt.which) ? evt.which : event.keyCode;
+        if (charCode != 46 && charCode > 31 && (charCode < 48 || charCode > 57)) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+       $(document).ready(function () {
+    
+           $("#idxAdd").click(function () {
+
+               // Perform the ajax post
+               $.post("/JacketOrder/AddToOrder",
+                   function (data) {
+                       // Successful requests get here
+                       // Update the page elements
+                       //  if (data.ItemCount == 0) {
+                       //      $('#row-' + data.DeleteId).fadeOut('slow');
+                       ////  } else {
+                       //      $('#item-count-' + data.DeleteId).text(data.ItemCount);
+                       //  }
+                       //  $('#cart-total').text(data.CartTotal);
+                       $('#update-message').text("Item is added");
+                       // $('#cart-status').text('Cart (' + data.CartCount + ')');
+                   });
+           });
+
+           /*  $("#idxSubmit").click(function () {
+            $('.collection').each(function (index, domEle)
+            {
+                var property=$(this).attr('propertyName');
+                $(this).children('td').each(function (index, domEle) {
+                $('input,select',$(this)).each(function (){
+                var oldName;
+                 
+                var name= $(this).attr('name')+'';
+                var i=  name.indexOf(']');
+                if(i>0){
+                    oldName= name.substr(i+2);
+                }else {
+                     oldName=  $(this).attr('name');
+                          
+                }
+
+             $(this).attr('name',property+'['+index+'].'+  oldName);
+             $(this).next('span').attr('name',property+'['+index+'].'+  oldName);// need to change the names of validations messages too.
+             $(this).next('span').attr('data-valmsg-for',property+'['+index+'].'+  oldName);
+         });
+     });
+ });   
+    });
+
+        $("#idxAdd").click(function () {
+
+            if ($("#idxColors :selected").val() == -1  ||
+                $("#idxSizes :selected").val() == -1) 
+          
+                return;
+
+            $('#idxOrderList > tbody:first').append('<tr class="collection" propertyName="JacketOrders"><td>' 
+                                        + '<input id="color_Id" type="hidden" value="' + $("#idxColors :selected").val() + '" name="ColorID">' 
+                                        + $("#idxColors :selected").text() +'</td>' 
+                                        + '<td><input id="size_Id" type="hidden" value="' + $("#idxSizes :selected").val() + '" name="SizeID">'
+                                        +  $("#idxSizes :selected").text() + '</td>' 
+                                        + '<td><input id=quantity_Id" type="hidden" value="' + $("#idxQuantity").val() + '" name="Quantity">'
+                                        +  $("#idxQuantity").val() + '</td>' 
+                                        + '</tr>' +
+            '<a href="javascript:void(0);" id="remCF">Remove</a> <span href="javascript:void(0);"  class="badge">Remove</span></td></tr>');
+
+        $("#remCF").on('click', function () {
+            $(this).parent().parent().remove();
+        });
+    });*/
+});
+</script>
+
+
+
+        
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

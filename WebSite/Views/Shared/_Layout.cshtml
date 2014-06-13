@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>@ViewBag.Title - Miss Nat's Dance School</title>
+    @using WebSite.HtmlExtensions
+    @Styles.Render("~/Content/bootstrap.min.css")
+    @Styles.Render("~/Content//slidebars.min.css")
+    @Styles.Render("~/Content/Site.css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+
+
+</head>
+
+<body>
+
+        <nav class="navbar navbar-default navbar-fixed-top sb-slide visible-xs" role="navigation">
+
+            <table style="width:100%">
+                <tr>
+                    <td>
+                        <div style="margin-top:10px">
+                            <div>
+                                <button id="toggleNav" class="navbar-toggle">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            @Html.ActionImage("Home", "Index", "~/images/logo-xs.png", "valign-middle ", "Home", "")
+
+                        </div>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        <a target="_facebook" href="https://www.facebook.com/groups/123762994319386/">
+                            <img src="/images/facebook-xs.png" width="30" height="30" class="valign-middle" style="float:right" />
+                        </a>
+                    </td>
+                </tr>
+            </table>
+
+
+        </nav>
+        <!--nav bar fixed top small-->
+
+        <div id="sb-site">
+            <div class="container">
+                <div class="row visible-sm">
+                   
+                    <div class="col-md-7">
+                      <form class="form-inline hidden-xs" role="form" style=" float: right;">
+                           <!--   <div class="form-group">
+                                <label class="sr-only" for="exampleInputEmail2">User name</label>
+                                <input type="email" class="form-control  input-x disabled" id="exampleInputEmail2" placeholder="Coming soon">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                <input type="password" class="form-control  input-xs disabled" id="exampleInputPassword2" placeholder="Coming soon">
+                            </div>
+                            <div class="form-group">
+
+                                <button type="submit" class="btn btn-primary btn-xs">>></button>
+                            </div>-->
+                            <div style="margin-left:20px" class="form-group">
+
+                                <a target="_facebook" href="https://www.facebook.com/groups/123762994319386/">
+                                    <img src="/images/facebook-md.png" class="hidden-sm valign-middle" style="float:right" />
+                                    <img src="/images/facebook-xs.png" width="30" height="30" class="visible-sm" style="float:right" />
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-5">
+                        @Html.ActionImage("Home", "Index", "~/images/logo-md.png", "img-responsive hidden-xs", "Home", "")
+                    </div>
+                   </div>
+                    <div class="row hidden-sm">
+
+                        <div class="col-md-5">
+                            @Html.ActionImage("Home", "Index", "~/images/logo-md.png", "img-responsive hidden-xs", "Home", "")
+                        </div>
+                        <div class="col-md-7">
+                         <form class="form-inline hidden-xs" role="form" style=" float: right;">
+                                <!--<div class="form-group">
+                                    <label class="sr-only" for="exampleInputEmail2">User name</label>
+                                    <input type="email" class="form-control  input-xs disabled" id="exampleInputEmail2" placeholder="Enter username">
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                    <input type="password" class="form-control  input-xs disabled" id="exampleInputPassword2" placeholder="Password">
+                                </div>
+                                <div class="form-group">
+
+                                    <button type="submit" class="btn btn-primary btn-xs disabled">>></button>
+                                </div>
+                                    -->
+                                <div style="margin-left:20px" class="form-group">
+
+                                    <a target="_facebook" href="https://www.facebook.com/groups/123762994319386/">
+                                        <img src="/images/facebook-md.png" class="hidden-sm valign-middle" style="float:right" />
+                                        <img src="/images/facebook-xs.png" width="30" height="30" class="visible-sm" style="float:right" />
+                                    </a>
+                                </div>
+                            </form> 
+
+                        </div>
+                    </div>
+
+                    <nav id="nav-menu" class="collapse navbar-collapse" role="navigation">
+
+                        <ul class="nav navbar-default navbar-nav navbar-right">
+                           <li>@Html.ActionLink("Timetables", "Timetable", "Home")</li>
+                            <li>@Html.ActionLink("Classes", "Classes", "Home")</li>
+                            <li>@Html.ActionLink("Pricing", "Pricing", "Home")</li>
+                            <li><a href="/Home/Newsletters"><b style="color:red"><i>New!</i></b> Newsletters</a></li>
+                            
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    Events
+                                    <b class="caret"></b>
+                                </a>
+                                <!-- Link or button to toggle dropdown -->
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("Performances", "Performances", "Home")</li>
+                                    <li>@Html.ActionLink("Choreography Showcases", "Choreo", "Home")</li>
+                                    <li>@Html.ActionLink("Workshops", "Workshops", "Home")</li>
+                                    <li>@Html.ActionLink("Annual Concert", "Concert", "Home")</li>
+                                    <li>@Html.ActionLink("Parties", "Parties", "Home")</li>
+                                </ul>
+
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    About Us
+                                    <b class="caret"></b>
+                                </a>
+                                <!-- Link or button to toggle dropdown -->
+                                <ul class="dropdown-menu">
+                                   
+                                    <li>@Html.ActionLink("Policies", "Policies", "Home")</li>
+                                    <li>@Html.ActionLink("Teachers", "Teachers", "Home")</li>
+                                    <li>@Html.ActionLink("Philosophy", "Philosophy", "Home")</li>
+                                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                                </ul>
+
+                            </li>
+
+
+                        </ul>
+                    </nav>
+
+                    <div class="container-content">
+                        <div class="row">
+                            <div class="col-sx-12">
+                                <div class="panel panel-danger">
+                                    <!-- Default panel contents -->
+                                    <div class="panel-heading"><h4>Attention Parents: Please  read @Html.ActionLink("our new studio policies", "Policies", "Home")!</h4></div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        @RenderBody()
+                        <div>
+
+                            <p class="text-muted">
+                                <address class="address-footer">
+                                    Unit 9/9 Parkes Street |
+                                    Cockburn Sound, WA 6164 |
+                                    <abbr title="Phone">P:</abbr> 0418 923 086  |
+                                    <abbr title="Email">E: </abbr>  <a href="mailto:missnatsdanceschool@hotmail.com">missnatsdanceschool@hotmail.com</a>
+                                </address>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div><!--container-->
+        </div><!-- sbmain site-->
+
+
+    <div class="sb-slidebar sb-left sb-style-overlay ">
+        <nav>
+            <ul class="sb-dropdown-menu">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("Timetables", "Timetable", "Home")</li>
+                <li>@Html.ActionLink("Classes", "Classes", "Home")</li>
+                <li>@Html.ActionLink("Pricing", "Pricing", "Home")</li>
+                <li><a href="/Home/Newsletters"><b style="color:red"><i>New!</i></b> Newsletters</a></li>
+                <li role="presentation" class="dropdown-header">Events</li>
+                <li>@Html.ActionLink("Performances", "Performances", "Home")</li>
+                <li>@Html.ActionLink("Choreography Showcases", "Choreo", "Home")</li>
+                <li>@Html.ActionLink("Workshops", "Workshops", "Home")</li>
+                <li>@Html.ActionLink("Annual Concert", "Concert", "Home")</li>
+                <li>@Html.ActionLink("Parties", "Parties", "Home")</li>
+                <li role="presentation" class="dropdown-header">About Us</li>
+                <li>@Html.ActionLink("Policies", "Policies", "Home")</li>
+                <li>@Html.ActionLink("Teachers", "Teachers", "Home")</li>
+                <li>@Html.ActionLink("Philosophy", "Philosophy", "Home")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+
+            </ul>
+        </nav>
+       
+    </div>
+   
+     
+
+        <!-- jQuery -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+        <!-- Slidebars -->
+        @Scripts.Render("~/Scripts/slidebars.js")
+
+        <script>
+            (function ($) {
+                $(document).ready(function () {
+
+                    var mySlidebars = new $.slidebars({
+                        disableOver: 767,
+                        hideControlClasses: true
+                    }
+);
+                    $('.navbar-toggle').on('click', function () {
+                        mySlidebars.toggle('left');
+                    });
+
+
+                });
+            })(jQuery);
+        </script>
+
+
+  
+ 
+</body>
+
+    @Scripts.Render("~/Scripts/bootstrap.min.js")
+    @RenderSection("scripts", required: false)
+
+</html>

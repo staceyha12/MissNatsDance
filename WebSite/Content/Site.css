@@ -1,0 +1,384 @@
+﻿html, body {width:100%; min-height: 100%;padding: 0; margin: 0;}
+
+body{
+    font-family:'Open Sans',Arial, Helvetica, sans-serif;
+	
+}
+div.c-wrapper{
+    width: 100%; /* for example */
+    margin: auto;
+}
+
+.carousel-inner > .item > img, 
+.carousel-inner > .item > a > img{
+width: 100%; /* use this, or not */
+margin: auto;
+}
+
+.carousel-indicators li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 1px;
+  text-indent: -999px;
+  cursor: pointer;
+  border: 1px solid #e9a1b7;
+  border-radius: 10px;
+}
+
+.carousel-indicators .active {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  background-color: #e9a1b7;
+}
+
+
+
+.slider-size {
+height: 400px; 
+width: 100%;
+}
+
+.dropdown-header {
+  display: block;
+  padding: 3px 20px;
+  font-size: 15px;
+  line-height: 1.428571429;
+  color: #428bca;
+  font-variant:small-caps;
+}
+
+
+.navbar-toggle {
+  position: relative;
+  float: left;
+  padding: 4px 5px;
+  margin-top: 2px;
+  margin-left: 10px;
+  margin-bottom: 2px;
+  margin-right:10px;
+  border-radius: 2px;
+
+}
+.navbar-default .navbar-toggle {
+border-color:  #e9a1b7;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  display: block;
+  width: 10px;
+  height: 2px;
+  border: 1px solid #d997ac;
+  border-radius: 1px;
+  
+}
+
+.navbar-header{
+    max-height:50px !important;
+}
+
+.thumbnail{
+    margin-bottom:15px;
+}
+
+@media (max-width: 992px) {
+    .thumbnail > img{
+     margin-left:0;
+     float:left;
+     }
+  
+}
+
+ @media (max-width: 381px) {
+ .navbar-nav > li {
+   padding-top: 10px;
+   }
+  }
+
+@media (min-width: 0) {
+  .navbar-toggle {
+    display: block; /* force showing the toggle */
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    padding: 0;
+  }
+  .navbar {
+    right: auto;
+    background: none;
+    border: none;
+  }
+}
+.container
+{
+    border:2px solid #dedbcc;
+}
+
+address.address-footer{
+    font-size:smaller;
+}
+
+
+@media (max-width: 768px) {
+    .table-responsive {
+        border: none;
+    }
+    .padding-xs
+    {
+        padding-bottom:10px;
+        
+    }
+    .container-content{
+   
+        margin-top:30px;
+    }
+}
+
+@media (min-width: 991px)
+{
+    .container-content{
+            margin-top:10px;
+    }
+
+}
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 10px;
+    font-weight:bold;
+
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: #f7f1f3;
+}
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+  background-color: #f7f1f3;
+  border-color: #428bca;
+}
+
+.container{
+    background-color:#f8f8f8;
+    padding:15px;
+    border-radius:5px;
+    margin:15px;
+}
+.jumbotron {
+  
+  background-color: #dedbcc;
+  padding:2px !important;
+  margin:auto !important;
+  
+}
+
+
+
+/* Text*/
+h1, h2, h3, h4, h5, caption
+{
+    font-weight:bold;
+    color:#676b6e;
+}
+
+table td a {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+
+/* Timetable */
+.table-striped > tbody > tr:nth-child(even) > td, th {
+  background-color:#ffffff !important;
+}
+
+
+
+/* img */
+
+@media (min-width: 768px) {
+    .img-right {
+        float: right;
+    }
+
+    .img-left {
+        float: left;
+    }
+}
+
+.img-float-right {
+float:right;
+padding-left:5px;
+padding-bottom:5px;
+}
+.img-float-left {
+float:left;
+padding-right:5px;
+padding-bottom:5px;
+
+}
+.img-float-none {
+float:none;
+}
+
+.valign-middle{
+    vertical-align:middle;
+}
+
+
+.input-xs {
+  height: 22px;
+  padding: 5px 10px;
+  font-size: 7pt;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.btn-xs {
+  height:20px;
+  padding:0;
+  font-size: 12px;
+  line-height: 1;
+  border-radius: 3px;
+}
+
+.sb-navmenu {
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  list-style: none;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+}
+
+.sb-slidebar {
+	height: 100%;
+	overflow-y: auto; /* Enable vertical scrolling on Slidebars when needed. */
+	position: fixed;
+	top: 0;
+	z-index: 0; /* Slidebars sit behind sb-site. */
+	visibility: hidden; /* Initially hide the Slidebars. */
+    background-color: #e9a1b7; /* Default Slidebars background colour, overwrite this with your own css. */
+}
+
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  list-style: none;
+  background-color:#f7f1f3;
+  border: 1px solid #f7e6ec;
+  border: 1px solid rgba(247, 230, 236, 0.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px  rgba(247, 230, 236, 0.15);
+  box-shadow: 0 6px 12px  rgba(247, 230, 236, 0.15);
+  background-clip: padding-box;
+}
+
+
+.sb-dropdown-menu {
+ top:0; 
+ display: block; 
+ background-color:transparent;
+ width:100%;
+ position: absolute;
+ left: 0;
+  z-index: 1000;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  list-style: none;
+  border: 0;
+  border-radius: 4px;
+  background-clip: padding-box;
+}
+
+.sb-dropdown-menu>li>a
+{
+    padding: 10px 20px;
+    color: #676b6e;
+    border-bottom:1px solid #e9a1b7;
+    display: block;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.428571429;
+    white-space: nowrap;
+}
+
+.dropdown-menu>li>a {
+    padding: 10px 20px;
+    color: #676b6e;
+    border-bottom:1px solid #f7f1f3;
+    display: block;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.428571429;
+    white-space: nowrap;
+}
+.sb-dropdown-menu>li>a{
+    margin-left:4px;
+}
+.sb-dropdown-menu > li > a:hover,
+.sb-dropdown-menu > li > a:focus 
+{
+  color: #f8f8f8;
+  text-decoration: none;
+  background-color: #d997ac;
+  border-bottom:1px solid transparent;
+
+ 
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  color: #f8f8f8;
+  text-decoration: none;
+  background-color: #e9a1b7;
+  border-bottom:1px solid transparent;
+
+ 
+}
+.sb-slidebar.sb-style-overlay {
+	z-index: 9999; /* Set z-index high to ensure it overlays any other site elements. */
+     -webkit-transform: translate(0px); /* Safari iOS 7.01 doesn't render the overlay.*/
+}
+
+
+#sb-site {
+  background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background: #e9a1b7; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U5YTFiNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjElIiBzdG9wLWNvbG9yPSIjZTlhMWI3IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iOTklIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+    background: -moz-linear-gradient(top,  #e9a1b7 0%, #e9a1b7 1%, #ffffff 99%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e9a1b7), color-stop(1%,#e9a1b7), color-stop(99%,#ffffff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #e9a1b7 0%,#e9a1b7 1%,#ffffff 99%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #e9a1b7 0%,#e9a1b7 1%,#ffffff 99%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #e9a1b7 0%,#e9a1b7 1%,#ffffff 99%); /* IE10+ */
+    background: linear-gradient(to bottom,  #e9a1b7 0%,#e9a1b7 1%,#ffffff 99%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9a1b7', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */
+  overflow: auto !important; /* For offcanvas */
+}
+
+#widgets > div > a > img{
+    margin-bottom:10px;
+    border-radius:3px;
+    border:1px solid #c6c3b3;
+}
