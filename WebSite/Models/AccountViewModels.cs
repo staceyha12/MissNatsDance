@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
 namespace WebSite.Models
-{//test
+{
     public class ExternalLoginConfirmationViewModel
     {
         [Required]
