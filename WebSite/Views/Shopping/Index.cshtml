@@ -1,17 +1,51 @@
-﻿
+﻿@model WebSite.Models.ShoppingCartItem
 @{
-    Layout = null;
+    ViewBag.Title = "Winter Jackets Order Form";
 }
 
-<!DOCTYPE html>
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading"><h4>Winter Jacket Order Form</h4></div>
+    <div class="panel-body">
+        <p>
+            @using (Html.BeginForm("AddToCart", "Shopping", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                <div class="form-group">
+                   
+                    <div class="col-md-2">
+                        @Html.DropDownListFor(m=>m.Color, Model.AvailableColors, new { @class = "form-control", @id = "idxColors" })
+                        @Html.ValidationMessageFor(m => m.Color, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-md-2">
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div> 
+                        @Html.DropDownListFor(m => m.Size, Model.AvailableSizes, new { @class = "form-control", @id = "idxSizes" })
+                        @Html.ValidationMessageFor(m => m.Size, "", new { @class = "text-danger" })
+                    </div>
+
+                    @Html.LabelFor(m => m.Quantity, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-2">
+                        @Html.TextBoxFor(m => m.Quantity, new {@class = "form-control", @value = "1", @id = "idxQuantity" })
+                        @Html.ValidationMessageFor(m => m.Quantity, "", new { @class = "text-danger" })
+                        <!--hidden fields-->
+                        @Html.HiddenFor(m => m.Price, new { @class = "form-control", @id = "idxPrice" })
+                        @Html.HiddenFor(m => m.Title, new { @class = "form-control", @id = "idxTitle" })
+                    </div>
+
+
+                    <div class="col-md-2">
+                        <input type="submit" class="btn bt btn-default" id="idxAdd" value="Add to Order" />
+                    </div>
+
+                  
+                </div>
+          
+                   
+
+            }
+          
+            <hr />
+            <div class="form-group">
+                @{Html.RenderAction("ShoppingCart", "Shopping");}
+            </div>
     </div>
-</body>
-</html>
+</div>

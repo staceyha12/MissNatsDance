@@ -1,32 +1,52 @@
-﻿@model WebSite.Models.ShoppingCart
+﻿@model WebSite.Models.ShoppingCartViewModel
 
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>ShoppingCart</title>
-</head>
-<body>
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <table class="table">
-        <tr>
-            <th></th>
-        </tr>
-    
-    @foreach (var item in Model.ShoppingCartItems) {
-        <tr>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.Key }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Key }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Key })
-            </td>
-        </tr>
-    }
-    
+@if (Model.ShoppingCartItems.Count > 0)
+{
+<div class="table-responsive">
+    <table class=" table table-striped">
+        @{int totalPrice = 0;}
+        @foreach (var item in Model.ShoppingCartItems)
+        {
+            <tr id="row-@item.">
+                <td>
+                    <b>@item.Quantity</b> @item.Title@if (item.Quantity > 1) { Write("s"); }, @item.Color, Size @item.Size 
+                </td>
+           
+   
+                <td>
+                    <b>$@(item.Price * item.Quantity).00</b>
+                </td>
+                <td>
+                    @Html.ActionLink("Remove", "RemoveFromCart", "Shopping")
+                </td>
+            </tr>
+            
+            totalPrice += (item.Price * item.Quantity);
+           
+        }
     </table>
-</body>
-</html>
+    <div class="table-responsive">
+        @using (Html.BeginForm("Confirmation", "Shopping", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                <table class="table" >
+                    <tr>
+                        <td align="right">
+                            <b>Total:</b>
+               
+                            <b>$@(totalPrice).00</b>
+                            @Html.Hidden("TotalPrice", totalPrice);
+               
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" class="btn bt btn-default" id="idxConfirm" value="Confirm Order" />
+                        </td>
+                    </tr>
+                </table>
+         }
+        </div>
+    </div>
+}
+

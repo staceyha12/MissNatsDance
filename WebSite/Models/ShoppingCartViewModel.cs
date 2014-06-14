@@ -20,12 +20,15 @@ namespace WebSite.Models
         public string Title { get; set; }
 
         [Required]
-        [Display(Name = "AvailableSizes")]
-        public string[] AvailableSizes { get; set; }
+        [Display(Name = "Price")]
+        public int Price { get; set; }
 
-        [Required]
+        [Display(Name = "AvailableSizes")]
+        public SelectList AvailableSizes { get; set; }
+
+        
         [Display(Name = "AvailableColors")]
-        public string[] AvailableColors { get; set; }
+        public SelectList AvailableColors { get; set; }
 
 
         [Required]
@@ -33,19 +36,11 @@ namespace WebSite.Models
         public string Description { get; set; }
     }
 
-   
 
 
-    public class ShoppingCartItem
+
+    public class ShoppingCartItem : InventoryItem
     {
-
-        [Required]
-        [Display(Name = "ID")]
-        public int ID { get; set; }
-
-        [Required]
-        [Display(Name = "Title")]
-        public InventoryItem Title { get; set; }
    
         [Required]
         [Display(Name = "Quantity")]
@@ -61,18 +56,37 @@ namespace WebSite.Models
 
     }
 
+  
+
+
 
     public class ShoppingCartViewModel
     {
 
         [Required]
         [Display(Name = "ID")]
-        public int ID { get; set; }
+        public string ID { get; set; }
+
+        [Required(ErrorMessage = "Name is required")]
+        [MinLength(5, ErrorMessage = "Name must be at least 5 letter")]
+        [Display(Name = "Name")]
+        public string Name { get; set; }
+
+
+        [Required]
+        [EmailAddress]
+        [Display(Name = "Email")]
+        public string Email { get; set; }
+
+
+        [Required]
+        [Display(Name = "TotalPrice")]
+        public int TotalPrice { get; set; }
 
         [Required]
         [Display(Name = "ShoppingCartItems")]
 
-        public Dictionary<string,ShoppingCartItem> ShoppingCartItems { get; set; }
+        public List<ShoppingCartItem> ShoppingCartItems { get; set; }
         
     }
 }

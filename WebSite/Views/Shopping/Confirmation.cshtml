@@ -1,0 +1,21 @@
+﻿@model WebSite.Models.ShoppingCartViewModel
+
+@{
+    ViewBag.Title = "Finalize Order";
+}
+
+
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading"><h4>Finalize Order</h4></div>
+    <div class="panel-body">
+        <p>
+            
+
+            However, in order in order to complete the order, please enclose the total amount of <b>$@Model.TotalPrice.00</b> in an envelop and deliver to Miss Nat.
+         
+        </p>
+        <p class="text-justify">
+        <input type="button" onclick="window.document.location.href = '@Url.Action("UserConfirmation", "Shopping")'" class="btn bt btn-default" id="ixOK" value="OK" />
+        </p></div>
+</div>
